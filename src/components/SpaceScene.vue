@@ -115,7 +115,6 @@ onMounted(() => {
 })
 
 const canvasRef = ref(null)
-
 const initEngine = () => {
   scene = new THREE.Scene()
   
@@ -295,22 +294,33 @@ let moon
 const textureLoader = new THREE.TextureLoader()
 
 const createLunarSurface = () => {
-  const moonGeo = new THREE.SphereGeometry(15, 64, 64)
-  const moonMat = new THREE.MeshStandardMaterial({
-    color: 0x888888,
+  // Ultra-high resolution segments for smooth displacement and lighting
+  const moonGeo = new THREE.SphereGeometry(15, 512, 512)
+  
+  const moonMat = new THREE.MeshPhysicalMaterial({
+    color: 0xcccccc, // Brighter to showcase detail
     roughness: 0.9,
-    metalness: 0.1,
-    bumpScale: 0.05
+    metalness: 0.0,
+    bumpScale: 0.1,
+    displacementScale: 0.35, 
+    displacementBias: -0.15,
+    clearcoat: 0.0, 
   })
   
-  textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/moon_1024.jpg', (tex) => {
-    moonMat.map = tex
-    moonMat.bumpMap = tex 
+  // Loading high-quality map with anisotropy to fix blurriness
+  textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/moon_1024.jpg', (texture) => {
+    // Sharpness fixes
+    texture.anisotropy = renderer.capabilities.getMaxAnisotropy()
+    texture.minFilter = THREE.LinearMipmapLinearFilter
+    texture.magFilter = THREE.LinearFilter
+    
+    moonMat.map = texture
+    moonMat.bumpMap = texture
+    moonMat.displacementMap = texture
     moonMat.needsUpdate = true
   })
   
   moon = new THREE.Mesh(moonGeo, moonMat)
-  // Positioned for Section 2 features zoom
   moon.position.set(20, 10, -30)
   moon.castShadow = true
   moon.receiveShadow = true

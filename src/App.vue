@@ -65,7 +65,7 @@
         <span class="card-tag">Critical Point</span>
         <h1>EVENT HORIZON</h1>
         <p>You are approaching the point of no return. Gravity becomes infinite. Time stands still.</p>
-        <a href="https://sinapsediaria.com/en/what-is-the-event-horizon-the-invisible-boundary-of-a-black-hole/" class="download-btn">ENTER SINGULARITY</a>
+        <a href="https://www.einstein-online.info/en/spotlight/the-singularity-theorem/" class="download-btn">ENTER SINGULARITY</a>
       </section>
 
     </main>
