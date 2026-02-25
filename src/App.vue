@@ -26,21 +26,21 @@
             <span class="card-tag">Rendering</span>
             <h3>Lumen Orbit</h3>
             <p>Fully dynamic global illumination that reacts instantly to solar flares and atmospheric changes.</p>
-            <a href="#" class="card-cta">Explore Technology</a>
+            <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine" class="card-cta">Explore Technology</a>
           </div>
 
           <div class="glass-card feature-card">
             <span class="card-tag">Physics</span>
             <h3>Nanite Debris</h3>
             <p>Render millions of crystalline fragments in real-time with pixel-perfect detail and zero lag.</p>
-            <a href="#" class="card-cta">View Documentation</a>
+            <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-in-unreal-engine" class="card-cta">View Documentation</a>
           </div>
 
           <div class="glass-card feature-card">
             <span class="card-tag">Production</span>
             <h3>Virtual Horizon</h3>
             <p>Seamlessly blend physical sets with digital orbital environments for unparalleled immersion.</p>
-            <a href="#" class="card-cta">Case Studies</a>
+            <a href="https://dev.epicgames.com/community/learning/tutorials/r6Lx/unreal-engine-black-hole-material" class="card-cta">Case Studies</a>
           </div>
 
         </div>
@@ -65,7 +65,7 @@
         <span class="card-tag">Critical Point</span>
         <h1>EVENT HORIZON</h1>
         <p>You are approaching the point of no return. Gravity becomes infinite. Time stands still.</p>
-        <a href="#" class="download-btn">ENTER SINGULARITY</a>
+        <a href="https://sinapsediaria.com/en/what-is-the-event-horizon-the-invisible-boundary-of-a-black-hole/" class="download-btn">ENTER SINGULARITY</a>
       </section>
 
     </main>
